@@ -1,0 +1,170 @@
+/*
+* {
+    padding:0;
+    margin:0;
+  }
+body{
+   
+    background-color: rgb(161, 13, 13);
+
+}
+
+
+.imgP, .sombra{
+   position: absolute;
+   left: -8%;
+   top: 400px;
+}
+img.sombra{
+    filter: brightness(0) blur(3px);
+    opacity: 0.7;
+    transform: translate(25px,5px);
+
+    z-index: -1;
+}
+*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(211, 16, 16);;
+    min-height: 100%;
+
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+header{
+    /* Header inicia na coluna 1 
+       e termina na coluna 3 
+       Pode ser esquito como:
+       grid-column: 1/3
+    
+    grid-column-start: 1;
+    grid-column-end: 3;
+    */
+    grid-area: header; /*Nomeando a Area*/
+}
+main{
+    /* Main inicia na coluna 1 
+       e termina na coluna 2 
+       Pode ser esquito como:
+       grid-column: 1/2
+    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    */
+    grid-area: main; /*Nomeando a Area*/
+}
+aside{
+    /* Aside inicia na coluna 2 
+       e termina na coluna 3 
+       Pode ser esquito como:
+       grid-column: 2/3   
+    grid-column-start: 2;
+    grid-column-end: 3;
+    */
+    grid-area: aside; /*Nomeando a Area*/
+}
+footer{
+    
+    /* Footer inicia na coluna 1 
+       e termina na coluna 3 
+       Pode ser esquito como:
+       grid-column: 1/3
+    
+    grid-column-start: 1;
+    grid-column-end: 3;
+    */
+    grid-area: footer; /*Nomeando a Area*/
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /*Primeira coluna pega 3 fraçores da tela, 
+      Segunda coluna pega apenas 1 */
+    grid-template-rows: 20vh 70vh 10vh;
+
+    /*Organizando na tela as posicoes */
+    grid-template-areas:"header header"
+                        "aside main"
+                        "footer footer"
+}
+.imgP, .sombra{
+    position: absolute;
+    height: 70%;
+    top: 30%;
+    left: -5%;
+    position: fixed;
+ }
+ img.sombra{
+     filter: brightness(0) blur(3px);
+     opacity: 0.7;
+     transform: translate(25px,5px);
+     z-index: -1;
+}
+
+.bloco_Principal{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+
+    background-color: black;
+    width: 100;
+    border-radius: 20px;
+    
+}
+.texto_inicio{
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 25px;
+    word-break: keep-all;
+    color: #ffff;
+}
+.rodaPe{
+    position: fixed;
+
+}
+.conteudos{
+    padding-top:30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 30px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.blocos{
+    background-color: black;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    
+}
+
+.blocos p{
+    text-align: center;
+    font-weight: 600;
+    color: #ffff;
+
+}
+
+.blocos img{
+    width: 250px;
+    height: 250px;
+    padding-top: 10px;
+    position: static;
+}
+
+.blocos img:hover{
+    opacity: .8;
+}
+.blocos p:hover{
+    color: red;
+}
+
